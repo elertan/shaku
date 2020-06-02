@@ -63,7 +63,8 @@ async fn main() -> Result<(), Box<dyn std::error::Error>>{
         let log_service: &mut dyn LogService = module.resolve_mut();
         log_service.log("Hello, world!").await?;
     }
-    
+
+    // Transactional operation
     {
         let tx = pool.begin().await?;
         let tx = Arc::new(Mutex::new(tx));
