@@ -1,0 +1,21 @@
+[package]
+name = "sqlx_generic_connection"
+version = "0.1.0"
+authors = ["Dennis Kievits <denkievits@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+[dependencies.shaku]
+path = "../../shaku"
+
+[dependencies.sqlx]
+version = "0.3.5"
+features = ["postgres"]
+
+[dependencies.async-std]
+version = "1.6.0"
+features = ["attributes"]
+
